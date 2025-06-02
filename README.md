@@ -154,5 +154,11 @@ http://127.0.0.1:5000/apidocs
 ```
 
 
-## 📘 Diagrama de clases
+## 📘 Endpoints de la API
+
+| Método | Endpoint               | Descripción                            | Ejemplo JSON / Curl                                                                                                                                                                                                                                 |
+|--------|------------------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| POST   | `/users`               | Registra un usuario nuevo.             | **JSON:**<br>```json<br>{<br>  "name": "Anderson",<br>  "preferred_channel": "email",<br>  "available_channels": ["email", "sms"]<br>}```<br><br>**Curl:**<br>```bash<br>curl -X POST http://127.0.0.1:5000/users \ <br>  -H "Content-Type: application/json" \ <br>  -d "{\"name\":\"Anderson\",\"preferred_channel\":\"email\",\"available_channels\":[\"email\",\"sms\"]}"<br>``` |
+| GET    | `/users`               | Lista todos los usuarios registrados.  | **Curl:**<br>```bash<br>curl http://127.0.0.1:5000/users<br>```                                                                                                                                                                                    |
+| POST   | `/notifications/send`  | Envía una notificación a un usuario.   | **JSON:**<br>```json<br>{<br>  "user_name": "Anderson",<br>  "message": "Tu cita es mañana a las 9:00 AM.",<br>  "priority": "high"<br>}```<br><br>**Curl:**<br>```bash<br>curl -X POST http://127.0.0.1:5000/notifications/send \ <br>  -H "Content-Type: application/json" \ <br>  -d "{\"user_name\":\"Anderson\",\"message\":\"Tu cita es mañana a las 9:00 AM.\",\"priority\":\"high\"}"<br>``` |
 
