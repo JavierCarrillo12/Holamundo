@@ -51,7 +51,7 @@ Laboratory1/1003740323
 
 ### 🔗 1. Chain of Responsability
 
-En la clase SendNotificationUseCase, se define una cadena de funciones (handlers) que simulan los canales de notificación (como send_email, send_sms). Estas se recorren en orden, y la ejecución se detiene en la primera que tenga éxito.
+- En la clase SendNotificationUseCase, se define una cadena de funciones (handlers) que simulan los canales de notificación (como send_email, send_sms). Estas se recorren en orden, y la ejecución se detiene en la primera que tenga éxito.
 
 ### 🧩 2. Singleton
 
@@ -77,7 +77,7 @@ python main.py o con el compilador que se tenga
 
 3. Ejecutar los endpoints:
 
-📫 Registro de usuario
+📫 **Registro de usuario**
 
 Puedes probar los endpoints usando Postman o directamente desde la terminal con curl.
 
@@ -116,7 +116,7 @@ curl -X POST http://127.0.0.1:5000/users \
     "available_channels": ["email", "sms"]
   }'
 ```
-📨 Enviar notificación
+📨 **Enviar notificación**
 
 Luego, puedes probar el envío de una notificación con este endpoint:
 
